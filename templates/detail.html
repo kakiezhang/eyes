@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+{% endblock %}
+{% block title %}eyes discover{% endblock %}
+
+
+{% block header %}
+{{ super() }}
+<!-- <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/order/style.css') }}" /> -->
+<script type="text/javascript" src="{{url_for('static',filename='highchart/js/highcharts.js')}}" ></script>
+<script type="text/javascript" src="{{url_for('static',filename='highchart/js/modules/exporting.js')}}" ></script>
+<script type="text/javascript" src="{{url_for('static',filename='js/detail.js')}}" ></script>
+{% endblock %}
+
+
+{% block main %}
+
+<div class="row">
+	<div class="large-12 columns">
+  		<h1>Welcome to Foundation</h1>
+	</div>
+</div>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+{% endblock main %}
