@@ -49,6 +49,21 @@ $(function () {
                         Highcharts.numberFormat(this.y, 2);
                 }
             },
+            plotOptions: {
+                spline: {
+                    lineWidth: 4,
+                    states: {
+                        hover: {
+                            lineWidth: 5
+                        }
+                    },
+                    marker: {
+                        enabled: false
+                    },
+                    pointInterval: 3600000, // one hour
+                    pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+                }
+            },
             legend: {
                 enabled: true
             },
@@ -63,13 +78,19 @@ $(function () {
                 data: (function() {
                     // generate an array of random data
                     var data = [],
-                        time = (new Date()).getTime(),
+                        // time = (new Date()).getTime(),
+                        time = Date.parse(new Date()),
                         i;
-    
-                    for (i = -19; i <= 0; i++) {
+					// var tmp_dt = parseInt(time / 1000);
+					var tmp_dt = time;
+					console.log(tmp_dt);
+                    for (i = 0; i <= 144; i++) {
+						tmp_dt = tmp_dt + 1000;
+						console.log(tmp_dt);
                         data.push({
-                            x: time + i * 1000,
-                            y: Math.random()
+                            // x: time + i * 1000,
+                            x: tmp_dt,
+                            y: Math.random() * 100
                         });
                     }
                     return data;
