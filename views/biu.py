@@ -22,9 +22,11 @@ def loadavg() :
     loads_input = open(load_avg_path, "r")
     if loads_input is not None :
         loads = loads_input.readline()
+        loads = loads[loads.find("load average:") + len("load average:"):]
     cpus_input = open(cpu_use_path, "r")
     if cpus_input is not None :
         cpus = cpus_input.readline()
+        cpus = cpus[cpus.find("Cpu(s):") + len("Cpu(s):"):]
 
     data = {
         "loads": loads,
