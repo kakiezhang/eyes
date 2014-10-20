@@ -1,0 +1,50 @@
+
+ul {
+	list-style: none;
+}
+
+.mint-menu div {
+	float: left;
+	margin-right: 120px;
+}
+
+.mint-menu span {
+	font-size: 18px;
+}
+
+.mint-content ul {
+	float: left;
+	margin-right: 70px;
+	padding-left: 0;
+	z-index: 1000;
+	border: 0px solid #ccc;
+	border-top: 0;
+}
+
+.mint-content ul li {
+	margin-left: 0;
+}
+
+#container {
+	min-width: 310px; 
+	height: 400px; 
+	margin: 0 auto;
+	margin-left: 25px;
+}
+
+.loads {
+	margin-bottom: 10px;
+}
+
+.app-machine span {
+	font-size: 16px;
+}
+
+.loads span {
+	font-size: 16px;
+}
+
+.cpus span {
+	margin-bottom: 10px;
+	font-size: 16px;
+}

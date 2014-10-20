@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+{% endblock %}
+{% block title %}eyes discover{% endblock %}
+
+{% block header %}
+{{ super() }}
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/loadavg.css') }}" />
+<script type="text/javascript" src="{{url_for('static',filename='js/loadavg.js')}}" ></script>
+{% endblock %}
+
+{% block main %}
+
+<div class="row">
+	<div class="large-12 columns">
+  		<h1>Load Avgrage & Cpu Usage</h1>
+	</div>
+</div>
+
+<div id="container">
+	<div class="mint-menu">
+		<div>
+			<span>IP</span>
+		</div>
+		<div>
+			<span>Load Avg</span>
+		</div>
+		<div>
+			<span>Cpu Usage</span>
+		</div>
+	</div>
+
+	<div style="clear: both;"></div>
+
+	<div class="mint-content">
+		<ul class="app-machine">
+			<li><span>10.4.14.19</span></li>
+		</ul>
+		<ul class="loads">
+			<li><span>{{ data['loads'] }}</span></li>
+		</ul>
+		<ul class="cpus">
+			<li><span>{{ data['cpus'] }}</span></li>
+		</ul>
+	</div>
+
+	<div style="clear: both;"></div>
+</div>
+
+{% endblock main %}
