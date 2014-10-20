@@ -10,4 +10,8 @@ class Config() :
     TEMPLATE_FOLDER = root_path + "templates"
     STATIC_FOLDER = root_path + "static"
 
+    MINT_LOCATION = "/Users/kakie/wwwroot/mint"
+    LOAD_FNAME = "load_avg"
+    CPU_FNAME = "cpu_use"
+
 config = Config()

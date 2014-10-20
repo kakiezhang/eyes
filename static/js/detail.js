@@ -9,7 +9,8 @@ $(function () {
         var chart;
         $('#container').highcharts({
             chart: {
-                type: 'spline',
+                // type: 'spline',
+                type: 'line',
                 animation: Highcharts.svg, // don't animate in old IE
                 marginRight: 10,
                 events: {
@@ -49,21 +50,21 @@ $(function () {
                         Highcharts.numberFormat(this.y, 2);
                 }
             },
-            plotOptions: {
-                spline: {
-                    lineWidth: 4,
-                    states: {
-                        hover: {
-                            lineWidth: 5
-                        }
-                    },
-                    marker: {
-                        enabled: false
-                    },
-                    pointInterval: 3600000, // one hour
-                    pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
-                }
-            },
+            // plotOptions: {
+            //     spline: {
+            //         lineWidth: 4,
+            //         states: {
+            //             hover: {
+            //                 lineWidth: 5
+            //             }
+            //         },
+            //         marker: {
+            //             enabled: false
+            //         },
+            //         pointInterval: 3600000, // one hour
+            //         pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            //     }
+            // },
             legend: {
                 enabled: true
             },
